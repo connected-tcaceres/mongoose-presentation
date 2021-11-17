@@ -95,6 +95,7 @@ function App() {
           <tr>
             <th>DB id</th>
             <th>room url</th>
+            <th>passcode</th>
             <th>is password protected?</th>
           </tr>
           {onlineRooms.map((room) => (
@@ -109,6 +110,7 @@ function App() {
                 {room.id}
               </td>
               <td>{room.url}</td>
+              <td>{room.passcode}</td>
               <td>{JSON.stringify(room.isPasswordProtected)}</td>
             </tr>
           ))}
