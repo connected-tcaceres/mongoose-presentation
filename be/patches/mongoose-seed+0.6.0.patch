@@ -1,0 +1,16 @@
+diff --git a/node_modules/mongoose-seed/index.js b/node_modules/mongoose-seed/index.js
+index bde6fbf..af47825 100644
+--- a/node_modules/mongoose-seed/index.js
++++ b/node_modules/mongoose-seed/index.js
+@@ -50,8 +50,9 @@ Seeder.prototype.connect = function(...params) {
+         process.exit(1);
+     }
+     
+-    mongoose.set("useCreateIndex", true);
+-    mongoose.set("useNewUrlParser", true);
++    // https://github.com/seanemmer/mongoose-seed/pull/42
++    // mongoose.set("useCreateIndex", true);
++    // mongoose.set("useNewUrlParser", true);
+     
+     if (mongoose.connection.readyState === 1) {
+         _this.connected = true;
